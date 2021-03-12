@@ -19,7 +19,7 @@
 #'  
 #' tbl <- 
 #'   example_pat_failure_A %>%
-#'   PurpleAirSoH_dailyOtherFit() 
+#'   PurpleAirSoH_dailyMetFit() 
 #'   
 #' timeseriesTbl_multiPlot(
 #'   tbl, 
@@ -33,7 +33,7 @@
 #' )
 #' 
 
-PurpleAirSoH_dailyOtherFit <- function(
+PurpleAirSoH_dailyMetFit <- function(
   pat = NULL
 ) {
   
@@ -77,7 +77,7 @@ PurpleAirSoH_dailyOtherFit <- function(
     datetime = MazamaCoreUtils::dateSequence(start, end - lubridate::ddays(1), timezone = timezone)
   )
   
-  # ----- Calculate dailyOtherFit -------------------------------------------
+  # ----- Calculate dailyMetFit -------------------------------------------
   
   # Note: This function uses a combination of lm() and summary() to calculate 
   # the r-squared between several channels rather than using stats::cor() 
@@ -91,7 +91,7 @@ PurpleAirSoH_dailyOtherFit <- function(
   #                      enddate = "2019-09-11",
   #                      timezone = "America/Los_Angeles")
   # cor_stats <- (stats::cor(pat$data$pm25_A, pat$data$temperature, use = "pairwise.complete.obs"))^2
-  # lm_rsquared <- PurpleAirSoH_dailyOtherFit(pat)
+  # lm_rsquared <- PurpleAirSoH_dailyMetFit(pat)
   # Notice that cor_stats and lm_rsquared$pm25_A_temperature_rsquared are the same.
   
   

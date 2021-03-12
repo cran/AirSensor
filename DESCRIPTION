@@ -1,6 +1,6 @@
 Type: Package
 Package: AirSensor
-Version: 1.0.2
+Version: 1.0.8
 Title: Process and Display Data from Air Quality Sensors
 Authors@R: c(
     person("Jonathan", "Callahan", email="jonathan.s.callahan@gmail.com", role=c("aut","cre")), 
@@ -25,8 +25,8 @@ Depends: R (>= 3.5.0)
 Imports: countrycode, cowplot, dplyr (>= 1.0.0), dygraphs, geodist,
         geosphere, GGally, ggmap, ggplot2, gridExtra, httpcode, httr,
         jsonlite, leaflet, lubridate, magrittr, MazamaCoreUtils (>=
-        0.4.2), MazamaLocationUtils (>= 0.1.6), MazamaSpatialUtils (>=
-        0.6.3), openair, PWFSLSmoke (>= 1.2.100), readr, RColorBrewer,
+        0.4.6), MazamaLocationUtils (>= 0.1.13), MazamaSpatialUtils (>=
+        0.7.3), openair, PWFSLSmoke (>= 1.2.111), readr, RColorBrewer,
         rlang, scales, seismicRoll, sp, stringr, tibble, tidyr,
         tidyselect, worldmet (>= 0.9.2), xts, zoo
 Suggests: knitr, markdown, testthat (>= 2.1.0), rmarkdown, roxygen2
@@ -43,5 +43,5 @@ LazyData: true
 RoxygenNote: 7.1.1
 Language: en-US
 NeedsCompilation: no
-Packaged: 2020-10-02 14:17:35 UTC; jonathan
-Date/Publication: 2020-10-08 12:10:02 UTC
+Packaged: 2021-03-11 21:09:49 UTC; jonathancallahan
+Date/Publication: 2021-03-12 21:40:09 UTC

@@ -11,13 +11,13 @@
 The AirSensor R package is being developed to help air quality analysts, 
 scientists and interested members of the public more easily work with air 
 quality data from consumer-grade air quality sensors. Initial focus is on PM2.5 
-measurements from sensors produced by [PurpleAir](https://www.purpleair.com).
+measurements from sensors produced by [PurpleAir](https://www2.purpleair.com).
 
 The package makes it easier to obtain data, perform analyses and create
 visualizations. It includes functionality to:
 
 * download and easily work with PM2.5 data from PurpleAir
-* visualize raw "engineering" data from a PurpleAir sensor
+* visualize raw "engineering-level" data from a PurpleAir sensor
 * visualize data quality using built-in analytics and plots
 * aggregate raw data onto an hourly axis
 * create interactive maps and time series plots
@@ -45,21 +45,16 @@ This package is designed to be used with [R](https://cran.r-project.org)
 (>= 3.5) and [RStudio](https://rstudio.com/) so make sure you have those 
 installed first.
 
-Until the package is available on CRAN or to get the latest development version, 
-users will want to install the **devtools** package to have access to the latest 
-version of the package from Github.
-
-The following packages should be installed by typing the following at the 
+The package is available on CRAN or you get the latest development version
+from GitHub. To install the latest development version, users will want to 
+install the **devtools** package and then type the following at the 
 RStudio console:
 
 ```
 # Note that vignettes require knitr and rmarkdown
 install.packages('knitr')
 install.packages('rmarkdown')
-install.packages('MazamaCoreUtils')
-install.packages('MazamaSpatialUtils')
-devtools::install_github('MazamaScience/worldmet')   # forked version includes fix
-devtools::install_github('MazamaScience/AirSensor')
+devtools::install_github("MazamaScience/AirSensor")
 ```
 
 Any work with spatial data, *e.g.* assigning countries, states and timezones, 
@@ -70,7 +65,9 @@ you should type the following at the RStudio console:
 library(MazamaSpatialUtils)
 dir.create('~/Data/Spatial', recursive=TRUE)
 setSpatialDataDir('~/Data/Spatial')
-installSpatialData()
+installSpatialData("NaturalEarthAdm1")
+installSpatialData("USCensusStates"")
+installSpatialData("CA_AirBasins_01")
 ```
 
 

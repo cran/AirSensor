@@ -1,3 +1,34 @@
+# AirSensor 1.0.8
+
+* Minor documentation updates.
+
+# AirSensor 1.0.7
+
+* Minor documentation updates to clarify "state-of-health" calculations.
+* Improved pattern matching for South Coast communities in `pas_addCommunityRegion()`.
+* Remove "Voc" column during `pas_load()` so that current and archival 'pas' 
+objects can be easily merged. (Some early 'pas' objects contained some "Voc"
+data but this has never been a focus of the **AirSensor** package. Later 'pas'
+objects do not contain the "Voc" parameter.)
+* `pas_load()` now properly handles loading of archival 'pas' objects prior to
+2019-08-02.
+
+# AirSensor 1.0.6
+
+* Fixed documentation and included dataset encoding to UTF-8 standard.
+
+# AirSensor 1.0.5
+
+* Improved monitor labeling in `pat_externalFit()` and `pat_monitorComparison()`.
+
+# AirSensor 1.0.4
+
+* Updated PAS baseUrl to 'https://www.purpleair.com/json?all=true'.
+
+# AirSensor 1.0.3
+
+* Improved legend in `pat_monitorComparision()`.
+
 # AirSensor 1.0.2
 
 * CRAN submission tweaks.
@@ -434,7 +465,7 @@ labels (currently used as unique identifiers)
 Refactored `PurpleAirSoH_daily~()` functions to use *dplyr* resulting in code
 that runs faster and is easier to understand.
 
-* Changed `~SoH_dailyCorrelation()` to `~SoH_dailyOtherFit()`.
+* Changed `~SoH_dailyCorrelation()` to `~SoH_dailyMetFit()`.
 * Changed `timeseriesTbl_multiPlot()` argument `parameterPatter` to `pattern`.
 
 # AirSensor 0.5.11
